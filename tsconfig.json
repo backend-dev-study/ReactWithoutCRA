@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es5",                                     // 어떠한 버전의 Javascript 코드로 컴파일할 것인지 설정
+    // "lib": [],                                        /* Specify a set of bundled library declaration files that describe the target runtime environment. */
+    "jsx": "preserve",                                   // .jsx 코드를 어떻게 컴파일할 것인지, react: .js 파일로 컴파일(JSX 코드는 React.createElement() 함수의 호출로 변환됨.)
+    "module": "commonjs",                                // 트랜스파일링 모듈 버전
+    "moduleResolution": "node",                          // 모듈 해석 전략 설정
+    "baseUrl": "./",                                     // 비상대적 import의 모듈 해석 시에 기준이 되는 경로를 지정 -> 비상대적? 상대적은 . ./ ../ 로 시작되는 모듈 경로인데 그 외의 것들인가..?
+    "sourceMap": true,                                   // 컴파일된 코드를 우리의 기존 코드와 연결하는 sourceMap 사용 여부
+    "outDir": "./dist",                                  // 컴파일한 파일들을 어느 디렉토리에 놓을 것인지 설정
+    "isolatedModules": true,                             /* Ensure that each file can be safely transpiled without relying on other imports. */
+    "allowSyntheticDefaultImports": true,                /* Allow 'import x from y' when a module doesn't have a default export. */
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
+    "forceConsistentCasingInFileNames": true,            // 사용할 파일의 이름을 대소문자까지 정확하게 작성하도록 강제하는 설정 ex) webConfig.js 파일은 WebConfig.js 파일로 불러올 수 없다.
+    "strict": true,                                      // 각종 타입 체킹 동작을 활성화 -> noImplicitAny 등
+    "skipLibCheck": true,                                // 모든 선언 파일(.d.ts)의 타입 체킹을 스킵하도록 하는 설정
+  },
+  "exclude": ["node_modules"],
+  "include": ["src"]
+}
